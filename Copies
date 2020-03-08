@@ -1,0 +1,131 @@
+  String ab = this.a;
+System.out.println(Arrays.toString(files(ab)));
+public File_Handler(String ab ){
+    this.a = ab;
+}String source = "Now is the time for all good men\n"
+          + " to come to the aid of their country\n"
+          + " and pay their due taxes.";
+  byte buf[] = source.getBytes();
+ByteArrayInputStream input1 = new ByteArrayInputStream(buf);
+input1.mark(6);
+ByteArrayInputStream input2 = new ByteArrayInputStream(buf, 0, 12);
+ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+outputStream.write(buf);
+  System.out.println(outputStream.toString());
+
+byte[] bt = outputStream.toByteArray();
+for(int i= 0;i<bt.length; i++){
+    System.out.println((char) bt[i]);
+}
+
+OutputStream f2 = new FileOutputStream("Text .txt");
+outputStream.writeTo(f2);
+String ab = "Hello world";
+byte[] ab1 = ab.getBytes();
+f2.write(ab1);
+f2.close();
+  System.out.println(f2.toString());
+
+  FileOutputStream fout = new FileOutputStream("Test");
+  DataOutputStream out = new DataOutputStream(fout);
+  out.writeDouble(98.6);
+  out.writeInt(1000);
+  out.writeBoolean(false);
+  out.close();
+  FileInputStream fin = new FileInputStream("test");
+  DataInputStream in = new DataInputStream(fin);
+  double d = in.readDouble();
+  int i = in.readInt();
+  boolean b = in.readBoolean();
+  System.out.println("Here are the values: " +
+          d + " " + i + " " + b);
+  in.close();
+
+
+
+
+
+
+	
+String a = "http";
+String b = "https://www.accuweather.com/en/ug/kampala/318416/weather-forecast/318416";
+String c = "";
+URL weather = new URL(b);
+
+System.out.println("Host:" + weather.getHost());
+System.out.println("Path: " + weather.getDefaultPort());
+System.out.println("Path: " + weather.getPath());
+
+System.out.println("port: " + weather.getPort());
+URLConnection content = weather.openConnection();
+System.out.println(content);
+content.getAllowUserInteraction();
+System.out.println(content);
+
+
+
+Applets
+   Scanner scan;
+    scan = new Scanner(System.in);
+    double ab = scan.nextDouble();
+    scan = new Scanner(System.in);
+    double at = scan.nextDouble();
+    scan = new Scanner(System.in);
+   String cho = scan.next();
+   if(cho.equalsIgnoreCase("multiply")) {
+       System.out.println(multiplier(ab, at));
+   } else {
+      if (cho.equalsIgnoreCase("divide") ) {
+          System.out.println(divider(ab, at));
+      }
+   }
+
+
+
+}
+public static double multiplier(double ab, double bb){
+    a = ab;
+    b = bb;
+     return a * b;
+}
+public static double divider(double ab, double at){
+    a = ab;
+    b = at;
+    return a/b;
+}
+
+
+String a = "E:\\new file";
+ File ab = new File(a);
+
+ URL ur = new  URL("https://www.accuweather.com/en/ug/kampala/318416/weather-forecast/318416");
+ HttpURLConnection con = (HttpURLConnection) ur.openConnection();
+
+System.out.println("Request method: " + con.getRequestMethod());
+
+ Map<String, List<String>> hdrMap = con.getHeaderFields();
+ Set<String> hdrField = hdrMap.keySet();
+ System.out.println("\nHere is the header:");
+
+ Button ace = new Button();
+ Label at = new Label("First Button");
+ at.setBounds(12,37,3,8);
+ System.out.println(at.getAlignment());
+ EventObject eventObject = new EventObject(ace);
+ System.out.println(eventObject.getSource());
+ Scrollbar atyp = new Scrollbar(Adjustable.HORIZONTAL);
+ AdjustmentEvent adj = new AdjustmentEvent(atyp, 12,01,BLOCK_DECREMENT );
+ System.out.println(adj.getAdjustable());
+
+ FocusEvent focus = new FocusEvent(atyp, FocusEvent.FOCUS_GAINED, false);
+ Checkbox check = new Checkbox();
+ ItemEvent select = new ItemEvent(check, ItemEvent.DESELECTED,check,ItemEvent.SELECTED);
+ System.out.println(select.getItem());
+ TextArea text = new TextArea();
+ TextEvent textEvent = new TextEvent(text, 1);
+ Window window;
+
+ HandlerAndNetwork mouse = new HandlerAndNetwork();
+ mouse.setBackground(Color.BLUE);
+ System.out.println(mouse);
+
